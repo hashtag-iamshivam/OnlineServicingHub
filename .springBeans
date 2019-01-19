@@ -9,6 +9,7 @@
 	<configs>
 	</configs>
 	<autoconfigs>
+		<config>WebContent/WEB-INF/spring-servlet.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>
