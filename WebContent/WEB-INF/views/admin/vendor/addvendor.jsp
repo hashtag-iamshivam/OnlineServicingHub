@@ -46,10 +46,6 @@
 				<td><s:radiobutton path="vendor_company_type" value="showroom"/>Showroom </td>		
 			</tr>
 			<tr>
-				<td>Status:</td>
-				<td><s:input path="status"/></td>
-			</tr>
-			<tr>
 				<td><input type="submit" value="Update Service" /></td>
 			</tr>
 			

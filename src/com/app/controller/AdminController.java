@@ -179,6 +179,8 @@ public class AdminController {
 	@GetMapping("/addvendor")
 	public String showAddVendorForm(Model map){
 		BikeVendor bikeVendor = new BikeVendor();
+		
+		bikeVendor.setStatus(0);
 		map.addAttribute("Vendor", bikeVendor);
 		System.out.println("In show ADD VENDOR FORM");
 		return "/admin/vendor/addvendor";

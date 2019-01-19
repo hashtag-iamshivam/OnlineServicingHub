@@ -16,7 +16,7 @@ public class BikeVendor {
 	private Integer vendor_office_number;
 	private Address vendor_address;
 	private String vendor_company_type;
-	private Integer status;
+	private Integer status=0;
 
 	//	
 	//	CONSTRUCTORS
@@ -45,8 +45,9 @@ public class BikeVendor {
 
 
 	public BikeVendor(String vendor_name, String vendor_email, String vendor_password, Integer vendor_contact,
-			String vendor_company_name, Integer vendor_AadhaarCard, Integer vendor_office_number,
-			Address vendor_address, String vendor_company_type, Integer status) {
+			String vendor_company_name, Integer vendor_AadhaarCard, Integer vendor_office_number, 
+			String vendor_company_type,
+			String vendor_city,Integer status) {
 		super();
 		this.vendor_name = vendor_name;
 		this.vendor_email = vendor_email;
@@ -55,7 +56,7 @@ public class BikeVendor {
 		this.vendor_company_name = vendor_company_name;
 		this.vendor_AadhaarCard = vendor_AadhaarCard;
 		this.vendor_office_number = vendor_office_number;
-		this.vendor_address = vendor_address;
+		this.vendor_address.setVendor_city(vendor_city);
 		this.vendor_company_type = vendor_company_type;
 		this.status = status;
 	}
@@ -85,7 +86,7 @@ public class BikeVendor {
 		this.vendor_name = vendor_name;
 	}
 
-	@Column(length=25)
+	@Column(length=25, unique=true)
 	public String getVendor_email() {
 		return vendor_email;
 	}
